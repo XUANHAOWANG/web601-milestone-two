@@ -1,0 +1,39 @@
+
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+      
+html 
+
+    h1 Welcome to E-game online shop
+    div.header
+       p.logo E-GAMES
+       a.exit(href="/") Logout 
+    div.search-div
+          form(action='/searchResultCustomer' method='post')
+                input(class='search' placeholder='Search your game through name' id='searchText' name="name")
+                button(id='searchBar' type='submit').search-btn Go  
+    div.cart-form
+        img( id='cart' class='cart' src='https://lh3.googleusercontent.com/proxy/U6TQy2E6QysgP6JHTSGXI9CX05RGk7voSpimLCQ1qLUVvQ2eoOmLCe5cIK63Da44e6CF6uKmLu_G2uqeFL1MuMgLPoXTyUxZ9f-Afg')                
+    div.body-content  
+        each resultItem in products 
+          div.productCustomer(id='itemCustomer', name='product')
+            p.name_text(id="itemName") #{resultItem.name}
+            p.description #{resultItem.description}
+            img(src=resultItem.imageUrl)
+            p.price_text #{'$'+resultItem.price}
+            div.toCartForm#toCartForm
+                form(action='/toCart' method='post')
+                    input(name='_id' value=resultItem._id).toCartInput
+                    button(type='submit').addToCartBtn Add product to cart
+
+    div.footer
+       p.footer_text Copyright:2021 xuanhaowang   
+
+
+
+//- set script here is to ensure all elements loaded
+script
+      include main.js
+style 
+    include main.css  

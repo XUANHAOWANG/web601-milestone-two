@@ -1,0 +1,32 @@
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+      
+html 
+
+    h1 Welcome to E-game online shop
+    div.header
+       p.logo E-GAMES
+
+    div.form
+      div.form-inner
+        h2.re-text Register
+        form(action='/addNewUser',method='post')
+            input(id="userName" name="name" placeholder="input your user name").username
+            input(id="firstPassword" placeholder="your password" name="password").password
+            input(id="secPassword" placeholder="please input your password again").password
+            button(id="submit").submit Submit
+        button(id="back" ).back Back
+      
+
+    div.footer
+       p.footer_text Copyright:2021 xuanhaowang   
+
+
+
+//- set script here is to ensure all elements loaded
+
+style 
+    include main.css      
+script 
+    include register.js       

@@ -1,0 +1,39 @@
+
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+      
+html 
+
+    h1 Thanks for your brilliant work
+    div.header
+       p.logo E-GAMES
+       a.exit(href="/adminPage") EXIT 
+    div#addPageBody  
+        div.body-content  
+         each resultItem in products
+            div.product(id='item', name='product')                  
+                form(action='/deleteItem' method='post')        
+                    p.name_text(id="itemName" ) #{resultItem.name}
+                    p.description #{resultItem.description}
+                    img(src=resultItem.imageUrl )
+                    p.price_text #{'$'+resultItem.price} 
+                    p.count #{resultItem.countInStock} in stock
+                    p Product ID : #{resultItem._id}
+                    input(name="name" class="deleteName" id="deleteName" value=resultItem.name) 
+                    button(id="deleteBtn" ).deleteItem Delete
+                form(action='/updateAdmin' method='post')
+                    input(name="_id" value=resultItem._id).updateInput   
+                    button(id="updateBtn").updateItem Update This Item    
+
+
+                           
+    div.footer
+       p.footer_text Copyright:2021 xuanhaowang   
+
+//- set script here is to ensure all elements loaded
+
+style 
+    include main.css       
+script
+    include admin.js 

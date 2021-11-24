@@ -1,0 +1,68 @@
+
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+      
+html 
+
+    h1 Thanks for your brilliant work
+    div.header
+       p.logo E-GAMES
+       a.exit(href="/") Logout 
+    div#addPageBody 
+        div.btns   
+            button(id="addBtn").adminBtn Add a new product 
+        div.search-div
+            form(action='/searchResultAdmin' method='post')
+                input(class='search' placeholder='Search your game through name' id='searchText' name="name")
+                button(id='searchBar' type='submit').search-btn Go      
+        div.body-content  
+         each product in products
+            div.product(id='item', name='product')                     
+                p.name_text(id="itemName" ) #{product.name}
+                p.description #{product.description}
+                img(src=product.imageUrl )
+                p.price_text #{'$'+product.price} 
+                p.count #{product.countInStock} in stock
+                p Product ID : #{product._id}
+                form(action='/deleteItem' method='post')
+                    input(name="name" class="deleteName" id="deleteName" value=product.name) 
+                    button(id="deleteBtn" ).deleteItem Delete 
+                form(action='/updateAdmin' method='post')
+                    input(name="_id" value=product._id).updateInput   
+                    button(id="updateBtn").updateItem Update This Item
+    //- div.form-update#updateProduct
+    //-     each product in products
+    //-             div.form-inner-update
+    //-                 h2.re-text Update the product
+    //-                     form(action='/updateData',method='post' )
+    //-                         input( id="name"  placeholder="Product name" name="name" value=product.name).name-input
+    //-                         input(id="imgUrl" placeholder="image url" name='imageUrl' value='').imgUrl-input
+    //-                         input(id="description" placeholder="product description" name='description' value='').description-input
+    //-                         input(id="price" placeholder="price" name='price' value='').price-input
+    //-                         input(id="countInStock" placeholder="count left" name='countInStock' value='').countInStock-input
+    //-                         button(id="update_addBtn"  ).update-form-btn Update the product
+    //-                     button(id="update_backBtn").update-form-btn Close             
+                    
+    div.form#addProduct
+        div.form-inner
+            h2.re-text Add a new  product
+            form(action='/addNewData',method='post')
+                input( id="name" placeholder='product name' name="name" ).name-input
+                input(id="imgUrl" placeholder="image URL" name="imgUrl" ).imgUrl-input
+                input(id="description" placeholder="add description" name="description").description-input
+                input(id="price" placeholder="price for product" name="price" ).price-input
+                input(id="countInStock" placeholder="how many count" name="countInStock" ).countInStock-input
+                button(id="addBtn").submit add product in stock
+            button(id="backBtn").back Close 
+            
+                          
+    div.footer
+       p.footer_text Copyright:2021 xuanhaowang   
+
+//- set script here is to ensure all elements loaded
+
+style 
+    include main.css       
+script
+    include admin.js     

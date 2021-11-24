@@ -1,0 +1,32 @@
+
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+      
+html 
+
+    h1 Welcome to E-game online shop
+    div.header
+       p.logo E-GAMES
+       a(href='/customerPage').exit Back to Main Page
+div.body-cart   
+    div.body-content-cart
+        each cart in carts
+          div.product-cart(id='item', name='product')
+            img(src=cart.imageUrl class="img-cart")
+            p.name_text-cart(id="itemName") #{cart .name}
+            p.description-cart #{cart .description}
+            p.price_text-cart #{'$'+cart .price}
+            form(action="/deleteCart" method="post")
+                input(name="_id" value=cart._id).cartInput
+                button(type="submit").delBtnCart Delete      
+div.footer
+       p.footer_text Copyright:2021 xuanhaowang   
+
+
+
+//- set script here is to ensure all elements loaded
+script
+      include main.js
+style 
+    include main.css           

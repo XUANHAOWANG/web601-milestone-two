@@ -1,0 +1,49 @@
+style
+ include main.css
+script
+ include login.js
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+      
+html 
+
+    h1 Welcome to E-game online shop
+    div.header
+       p.logo E-GAMES
+    div.form#loginForm
+      div.form-inner
+        h2.re-text Login
+           p#admin.admin Administrator Login 
+        form(action="/login_user" method="post") 
+          input(id="userName" placeholder="input your user name" name="name").username
+          input(id="firstPassword" placeholder="your password" name="password").password
+          button(id="submit").submit Login
+        button(id="backBtn" onclick="/").back Back
+        button.RegisterBtn#register Registration
+    //- set a administrator login 
+    div.admin-form#adminForm
+      div.form-inner
+        h2.ad-text Administration
+        form(action="admin_login" method="post")
+          input(id="adUserName" placeholder="input your user name" name="adminName").username
+          input(id="adPassword" placeholder="your password" name="[password").password
+          button(id="adSubmit").submit Login
+        button(id="adBack" ).back Customer Login 
+        p admin User name is:wang001  Password is :wang001
+          
+        
+
+
+    div.footer
+       p.footer_text Copyright:2021 xuanhaowang 
+
+
+
+ 
+
+
+
+
+
+         

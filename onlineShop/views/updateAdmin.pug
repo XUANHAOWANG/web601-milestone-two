@@ -1,0 +1,33 @@
+
+head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+      
+html 
+
+    h1 Thanks for your brilliant work
+    div.header
+       p.logo E-GAMES
+       a.exit(href="/adminPage") Back 
+    div.body-content-updatePage  
+         each itemUpdate in products
+            img(src=itemUpdate.imageUrl).img-updatePage
+            div.product-updatePage 
+             form(action='/updateData' method='post')   
+                input(value=itemUpdate.name placeholder="Item name" name='name').name-input-update
+                input(value=itemUpdate.imageUrl placeholder="Item image url" name='imageUrl').url-input-update   
+                input(value=itemUpdate.description placeholder="Item description" name='description').description-input-update  
+                input(value=itemUpdate.price placeholder="Item price" name="price").price-input-update 
+                input(value=itemUpdate.countInStock placeholder="The count in stock" name="countInStock").count-input-update
+                input(value=itemUpdate._id placeholder="Item  ID" name="_id").id-input-update                         
+                button(id="updateBtn").updateItem Update This Product            
+                          
+    div.footer
+       p.footer_text Copyright:2021 xuanhaowang   
+
+//- set script here is to ensure all elements loaded
+
+style 
+    include main.css       
+script
+    include admin.js  

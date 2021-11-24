@@ -1,0 +1,506 @@
+img{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    margin-Top: 20px;
+}
+body{
+    background-color: antiquewhite;
+    
+
+ overflow-x: hidden;
+}
+p{
+    font: 15px "Helvetica Neue";
+    margin-left: 5px;
+    font-family:'Times New Roman', Times, serif;
+    
+    
+}
+.price_text{
+    color:rgb(212, 51, 91);
+    font-size:20px;
+    font-weight:bold;
+    width:80px;
+}
+.name_text{
+    font-size: 18px;
+    font-family:fantasy;
+}
+.description{
+    height: 80px;
+}
+
+.logo{
+    position: relative;
+    float: left;
+    color:white;
+    font-size:45px;
+    font-family: cursive;
+    left:5%;
+}
+.login{
+   
+    color:aliceblue;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    float: right;
+    top: 30px; 
+    margin-right: 10px;
+}
+.register{
+   
+    color:aliceblue;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    float: right;
+    top: 30px; 
+    margin-left: 10px; 
+}
+.header{
+    margin:0 auto;
+    width: 100%;
+    height: 200px;
+    background-color:rgb(24, 37, 53);
+}
+.search-div{
+    width: 550px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom:15px;
+    
+   
+}
+.search{
+    width:450px;
+    height: 50px;
+    margin-top: 10%;
+    
+}
+.search-btn{
+    height: 50px;
+    width: 55px;
+    border: 3px rgb(248, 248, 248) solid;
+    background-color:rgb(212, 11, 11);
+    color:rgb(255, 255, 255)
+    
+}
+.search-btn:hover{
+    border-color:rgb(22, 168, 236);
+}
+.body-content{
+    width: 60%;
+    margin: 0 auto;
+}
+.product{
+width: 320px;
+height: 650px;
+border: 5px solid rgb(24, 24, 26);
+margin:5px;
+position: relative;
+float: left;
+background-color:rgba(255, 255, 255, 0.466);
+}
+.product:hover{
+    border: 5px solid rgb(185, 65, 65)
+    
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color:rgb(24, 37, 53);
+    display:flex;
+    position:relative;
+}
+
+.footer_text{
+    left: 40%;
+    color:rgb(255, 255, 255);
+    font-size:25px;
+    position: relative;
+
+}
+
+/* set register style */
+.form{
+    position: relative;
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    border: 4px solid rgb(69, 88, 88);
+    margin-top: 100px;
+    margin-bottom:300px;
+    background-color:rgb(243, 243, 243);
+}
+
+.username, .password{
+    position: relative;
+    margin: 0 auto;
+    width: 350px;
+    height: 50px;
+    border: 2px solid rgb(115, 207, 230);
+    margin-top:30px;
+    display:left;
+    font-size:15px;
+}
+
+.submit,.back,.RegisterBtn{
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top:30px;
+    display:left;
+    left:80px;
+    font-size:15px;
+    font-weight:bold;
+    background-color:rgb(212, 20, 20);
+    color:rgb(255, 255, 255);
+}
+.submit:hover{
+  border: 4px solid rgb(120, 255, 127);
+  cursor: pointer;
+}
+.back:hover{
+    border: 4px solid rgb(120, 255, 127);
+    cursor: pointer;
+}
+.RegisterBtn:hover{
+    border: 4px solid rgb(120, 255, 127);
+    cursor: pointer;
+}
+.form-inner{
+    margin: 0 auto;
+    width: 390px;
+    margin-top:60px;
+}
+.re-text{
+    font-size:30px;
+    color:rgb(212, 20, 20);
+    margin: 0 auto;
+    position: relative;
+    font-family:fantasy;
+    width:150px
+}
+/* register end */
+
+
+/* login style */
+.admin{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    float: left;
+}
+.admin:hover{
+    color:blue;
+    cursor: pointer;
+}
+.admin-form{
+    position: relative;
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    border: 4px solid rgb(238, 91, 91);
+    margin-top: 100px;
+    margin-bottom:300px;
+    background-color:rgb(238, 183, 146);
+    display:none;
+
+}
+.ad-text{
+    font-size:30px;
+    font-family: fantasy;
+    color:rgb(194, 58, 24);
+    margin: 0 auto;
+    float:left;
+}
+/* login page end */
+
+
+/* add product  page*/
+.name-input,.imgUrl-input,.description-input,.price-input,.countInStock-input{
+    width:350px;
+    height:50px;
+}
+/* add product page end */
+
+/* administer page */
+.adminBtn{
+    width:100px;
+    height:50px;
+    color:rgb(255, 255, 255);
+    background-color:rgb(248, 69, 69);
+    margin-top:20px;
+    float:left;
+    position:relative;
+    border: 4px solid white;
+    font-size:15px;
+    font-weight:bold;
+}
+.adminBtn:hover{
+    border-color:rgb(74, 230, 144)
+}
+.btns{
+    width:100px;
+    position: fixed;
+    float:left;
+    margin-left:10%;
+    margin-top: 100px;
+}
+.exit{
+    color:greenyellow;
+    font-size:25px;
+    float:right;
+    position: relative;
+    margin-right:200px;
+    margin-top: 100px;
+}
+#addProduct,#updateProduct_search{
+    display:none;
+}
+/* .form-update{
+    display:none;
+} */
+.form-update-open{
+    display:block;
+}
+
+.add-form-show{
+    margin:0 auto;
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border: 4px solid rgb(69, 88, 88);
+    background-color:rgb(243, 243, 243);
+    left:30%;
+    top:25%;
+    /* float above all elements */
+    z-index:999 
+
+}
+
+.add-page-Body{
+    /* Blur background */
+    filter:blur(5px);
+    -o-filter:blur(5px);
+    -ms-filter:blur(5px);
+    -moz-filter:blur(5px);
+    -webkit-filter:blur(5px);
+}
+.deleteItem,.updateItem{
+    position:relative;
+    margin: 0 auto;
+    background-color:rgb(66, 62, 62);
+    color:white;
+    border:4px solid white;
+    float:left;
+width:100px;
+height:50px;
+
+}
+.updateInput   {
+    display: none !important;
+}
+.updateItem{
+    background-color:rgb(61, 94, 121);
+}
+.deleteItem:hover{
+    border:3px solid rgb(74, 236, 74);
+}
+.updateItem:hover{
+    border:3px solid rgb(74, 236, 74);
+}
+.count{
+    font-size:15px;
+    position: relative;
+    color:rgb(167, 55, 55);
+}
+.deleteName{
+    display: none;
+}
+.form-update{
+    margin:0 auto;
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border: 4px solid rgb(76, 107, 107);
+    background-color:rgb(243, 243, 243);
+    left:30%;
+    top:25%;
+    /* float above all elements */
+    z-index:999 
+}
+.form-inner-update{
+    width:400px;
+    text-align:center;
+    float:left;
+    margin:0 auto;
+left:20%;
+    position: relative;
+  
+}
+.update-form-btn{
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-top:30px;
+    display:left;
+    font-size:15px;
+    font-weight:bold;
+    background-color:rgb(38, 65, 71);
+    color:rgb(255, 255, 255);
+}
+.update-form-btn:hover {
+    border:3px solid yellow;
+}
+/* administer page end*/
+
+
+/*customer page*/
+.productCustomer{
+    width: 320px;
+    height: 650px;
+    border: 5px solid rgb(24, 24, 26);
+    margin:5px;
+    position: relative;
+    float: left;
+    background-color:rgba(255, 255, 255, 0.466);
+    }
+    .productCustomer:hover{
+        border: 5px solid rgb(185, 65, 65)
+        
+    }
+.cart{
+width:80px;
+height:80px;
+position: fixed;
+margin-Top: 0;
+border:1px solid white;
+border-radius:50%;
+    }
+.cart:hover{
+border: 5px solid rgb(26, 29, 28)
+}
+.cart-form{
+border:1px solid white;
+border-radius:50%;
+position:fixed;
+float: left;
+left:100px;
+
+}
+/* .toCartForm{
+    display:none;
+} */
+.toCartInput{
+    display:none !important;
+}
+.addToCartBtn,.cancelBtn{
+width:120px;
+height:40px;
+border:1px solid white;
+background-color: rgb(104, 104, 104);
+color:white;
+font-size:15px;
+font-weight: bold;
+position:relative;
+margin-left: 90px;
+}
+.addToCartBtn:hover{
+    border:3px solid rgb(247, 55, 55);
+}
+.cancelBtn:hover{
+    border:3px solid rgb(240, 49, 49);
+}
+
+
+
+/*cart page*/
+.product-cart{
+    width:80%;
+    height:300px;
+    border:5px solid rgb(58, 49, 46);
+    position: relative;
+    left:8%;
+    margin-top:50px;
+}
+.img-cart{
+    position: relative;
+    float:left;
+    margin-top:0;
+}
+.name_text-cart,.description-cart,.price_text-cart,.delBtnCart{
+    position: relative;
+    float:left;
+    margin-top:50px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.description-cart{
+    width:30%;
+}
+.name_text-cart{
+    width:20%;
+    margin-left: 50px;
+}
+.price_text-cart{
+    margin-left:50px;
+}
+.body-cart{
+    margin-top:10% ;
+    margin-bottom:10%;
+}
+.delBtnCart{
+    width:80px;
+    height:40px;
+    margin-left:5%;
+    background-color:rgb(77, 66, 66);
+    color:white;
+    border:4px solid white;
+    
+}
+.delBtnCart:hover{
+    border:3px solid rgb(247, 72, 72);
+}
+.price_text-cart{
+    width:10%;
+}
+.cartInput{
+    display: none !important;
+}
+/*update admin page*/
+.body-content-updatePage {
+    width:70%;
+    height:400px;
+    position:relative;
+    float:left;
+    border:5px solid rgb(59, 53, 53);
+    margin-top:10%;
+    margin-bottom:10%;
+    left:10%;
+}
+.img-updatePage {
+    position: relative;
+    float:right;
+    
+}
+.product-updatePage {
+width:70%;
+}
+.name-input-update,.url-input-update,.description-input-update,.price-input-update ,.count-input-update,.id-input-update {
+    width:30%; 
+    height:100px; 
+    position: relative; 
+    float:left;
+    margin:10px;
+    font-size: 15px;
+    font-weight: bold;
+}
